@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Guessing game</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="Guess-number.css">
+    </head>
+    <body>
+        <h1>&#129300;Игра в угадывание чисел&#129300;</h1>
+        <p>Я выбрал случайное число от 1 до 100.</p>
+        <p> Посмотрим, сможешь ли ты  угадать это за 10 ходов или раньше.</p>
+        <p> Я скажу вам, было ли ваше предположение слишком близко или слишком далеко.</p>
+        <p class="gifs">
+            <img src="./Gif/FkmW.gif">
+            <img src="./Gif/y7.gif">
+            <img src="./Gif/72gi.gif">
+        </p>
+        <div class="form">
+        <label for="guessField">Введите предположение:</label>
+        <input type="number" step="1" min="1" max="100"  required placeholder="Эй введи число пж" onkeyup="imposeMinMax(this)" id="guessField" class="guessField">
+        <input  type="submit"  value="Подтвердить предположение" onkeyup="this"  class="guessSubmit">
+        </div>
+        <div class="resultParas">
+            <p class="guesses"></p>
+            <p class="lastResult"></p>
+            <p class="lowOrHi"></p>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
